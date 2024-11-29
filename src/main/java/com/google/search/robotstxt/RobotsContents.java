@@ -28,13 +28,13 @@ public class RobotsContents {
    * Representation of robots.txt group of rules: multiple user-agents to which multiple rules are
    * applied.
    */
-  static class Group {
+  public static class Group {
     /** Representation of robots.txt rule: pair of directive and value. */
-    static class Rule {
+    public static class Rule {
       private final Parser.DirectiveType directiveType;
       private final String directiveValue;
 
-      Rule(final Parser.DirectiveType directiveType, final String directiveValue) {
+      public Rule(final Parser.DirectiveType directiveType, final String directiveValue) {
         this.directiveType = directiveType;
         this.directiveValue = directiveValue;
       }
@@ -72,12 +72,12 @@ public class RobotsContents {
     }
 
     // Intended to be used from tests only.
-    Group(final List<String> userAgents, final List<Rule> rules) {
+    public Group(final List<String> userAgents, final List<Rule> rules) {
       this(userAgents, rules, false);
     }
 
     // Intended to be used from tests only.
-    Group(final List<String> userAgents, final List<Rule> rules, final boolean global) {
+    public Group(final List<String> userAgents, final List<Rule> rules, final boolean global) {
       this.userAgents = new HashSet<>(userAgents);
       this.rules = new HashSet<>(rules);
       this.global = global;

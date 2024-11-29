@@ -19,7 +19,7 @@ package com.google.search.robotstxt;
  * provide tokenizer logic while parsing logic is delegated to a {@link ParseHandler} class.
  */
 public abstract class Parser {
-  enum DirectiveType {
+  public enum DirectiveType {
     USER_AGENT,
     ALLOW,
     DISALLOW,
@@ -35,7 +35,7 @@ public abstract class Parser {
    *
    * @param parseHandler handler to follow during parsing process.
    */
-  protected Parser(ParseHandler parseHandler) {
+  public Parser(ParseHandler parseHandler) {
     this.parseHandler = parseHandler;
   }
 
@@ -45,5 +45,5 @@ public abstract class Parser {
    * @param robotsTxtBodyBytes body of robots.txt file to parse
    * @return matcher representing given robots.txt file
    */
-  abstract Matcher parse(final byte[] robotsTxtBodyBytes);
+  public abstract Matcher parse(final byte[] robotsTxtBodyBytes);
 }

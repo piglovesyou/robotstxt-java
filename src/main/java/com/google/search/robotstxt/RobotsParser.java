@@ -30,7 +30,7 @@ public class RobotsParser extends Parser {
     this.valueMaxLengthBytes = 2083;
   }
 
-  RobotsParser(final ParseHandler parseHandler, final int valueMaxLengthBytes) {
+  public RobotsParser(final ParseHandler parseHandler, final int valueMaxLengthBytes) {
     super(parseHandler);
     this.valueMaxLengthBytes = valueMaxLengthBytes;
   }
@@ -226,7 +226,7 @@ public class RobotsParser extends Parser {
   }
 
   @Override
-  Matcher parse(byte[] robotsTxtBodyBytes) {
+  public Matcher parse(byte[] robotsTxtBodyBytes) {
     final byte[] bomUtf8 = {(byte) 0xEF, (byte) 0xBB, (byte) 0xBF};
     int bomPos = 0;
 

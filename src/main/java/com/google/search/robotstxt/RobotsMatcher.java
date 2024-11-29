@@ -64,7 +64,7 @@ public class RobotsMatcher implements Matcher {
   }
 
   /** Used to extract contents for testing purposes. */
-  RobotsContents getRobotsContents() {
+  public RobotsContents getRobotsContents() {
     return robotsContents;
   }
 
