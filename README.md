@@ -1,3 +1,7 @@
+_This is a folked version of https://github.com/google/robotstxt-java. I made the internal classes public, so that the other projects can use `RobotsParser` and `RobotsMatcher` programmatically._
+
+_Right now, every push on `master` will update`1.0-SNAPSHOT`; Compatibility is not guaranteed for my limited use case. Please feel free to give me PRs to improve it._ 
+
 # Google Robots.txt Parser and Matcher Library in Java
 
 This project aims to implement the robots.txt parser and matcher in Java. It is
